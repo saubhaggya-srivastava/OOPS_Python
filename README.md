@@ -70,7 +70,7 @@ class Shape(ABC):
     def area(self):
         pass
 
-# Class Rectangle
+# Class Rectangle(Concrete Classes)
 class Rectangle(Shape):
 
     def draw(self):
@@ -79,7 +79,7 @@ class Rectangle(Shape):
     def area(self, length, breadth):
         return length * breadth
 
-# Class Circle
+# Class Circle(Concrete Classes)
 class Circle(Shape):
 
     def draw(self):
