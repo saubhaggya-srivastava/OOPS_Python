@@ -1,23 +1,21 @@
 # OOPS_Python
-# Encapsulation Example in Python
 
 ## 📌 Description
 
-This repository contains a simple example of **Encapsulation** in Python.  
-Encapsulation is one of the fundamental principles of Object-Oriented Programming (OOP), which refers to **binding data members (variables) and member functions (methods) inside a single unit (class)**.  
-It also helps in **data hiding**, restricting direct access to some of an object's components, which is useful for preventing accidental modification of data.
+This repository contains simple and clear examples of **Encapsulation** and **Abstraction** in Python.  
+Both are fundamental principles of **Object-Oriented Programming (OOP)** that help in organizing code, hiding complexity, and securing data.
 
 ---
 
 ## 📚 What is Encapsulation?
 
-- **Encapsulation** means wrapping the data (variables) and code (methods) together as a single unit.
-- In Python, we achieve encapsulation by using **private variables** (prefixing variable names with `__`).
-- It helps in **data hiding** and provides control over the data by **getters** and **setters**.
+- **Encapsulation** means wrapping the data (variables) and code (methods) together as a single unit called a **class**.
+- It restricts direct access to some of an object's components, using **private variables**.
+- Encapsulation helps in **data hiding** and provides controlled access to the data using **getter** and **setter** methods.
 
 ---
 
-## 💻 Code Example
+## 💻 Encapsulation Example
 
 ```python
 # Encapsulation Example
@@ -38,13 +36,84 @@ d1 = Date(10, 11, 2003)
 d1.get()  # Output: Date is: 10/11/2003
 ```
 
+### ✅ Output
+
+```
+Date is: 10/11/2003
+```
+
 ---
 
+## 📚 What is Abstraction?
 
+- **Abstraction** is used to **hide complex implementation** and **show only essential features** to the user.
+- In Python, **Abstract Base Classes (ABC)** and **abstract methods** are used to implement abstraction.
+- It focuses on **what to do**, not **how to do**.
+
+---
+
+## 💻 Abstraction Example
+
+```python
+# Abstraction Example
+
+from abc import ABC, abstractmethod
+
+# Abstract Class
+class Shape(ABC):
+
+    @abstractmethod
+    def draw(self):
+        pass
+
+    @abstractmethod
+    def area(self):
+        pass
+
+# Class Rectangle
+class Rectangle(Shape):
+
+    def draw(self):
+        print("Drawing a Rectangle")
+
+    def area(self, length, breadth):
+        return length * breadth
+
+# Class Circle
+class Circle(Shape):
+
+    def draw(self):
+        print("Drawing a Circle")
+
+    def area(self, radius):
+        return 3.14 * radius * radius
+
+# Object creation and method calls
+r1 = Rectangle()
+r1.draw()
+areaR = r1.area(2, 3)
+print(areaR)
+
+c1 = Circle()
+c1.draw()
+areaC = c1.area(5)
+print(areaC)
+```
+
+### ✅ Output
+
+```
+Drawing a Rectangle
+6
+Drawing a Circle
+78.5
+```
+
+---
 
 ## 📧 Contact
-Saubhaggya Srivastava
+
+**Saubhaggya Srivastava**  
 For any queries, contact me at [saubhaggya321@gmail.com]  
 
 
-> **Note:** Replace `your-username`, `your-repo-name`, and `your-email@example.com` with your actual details before uploading.
